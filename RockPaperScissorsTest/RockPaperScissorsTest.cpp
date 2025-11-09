@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 
-extern "C" const char* RockPaperScissors(const char* player1, const char* player2);
+extern "C" const char* RockPaperScissors(const char*, const char*);
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -13,8 +13,8 @@ namespace RockPaperScissorsTest
 
 		TEST_METHOD(Player1Wins)
 		{
-			// Player 1 chooses Rock, Player 2 chooses Scissors
-			Assert::AreEqual("Player 1", RockPaperScissors("Rock", "Scissors"));
+			// Test case where Player 1 chooses rock and Player 2 chooses scissors
+			Assert::AreEqual(std::string("Player 1"), std::string(RockPaperScissors("rock", "scissors")));
 		}
 	};
 }
