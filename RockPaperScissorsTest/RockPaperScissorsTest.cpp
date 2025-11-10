@@ -16,5 +16,11 @@ namespace RockPaperScissorsTest
 			// Test case where Player 1 chooses rock and Player 2 chooses scissors
 			Assert::AreEqual(std::string("Player 1"), std::string(RockPaperScissors("rock", "scissors")));
 		}
+
+		TEST_METHOD(Player2Wins)
+		{
+			// Test case where Player 1 chooses rock and Player 2 chooses paper
+			Assert::AreEqual(std::string("Player 2"), std::string(RockPaperScissors("rock", "paper")));
+		}
 	};
 }
