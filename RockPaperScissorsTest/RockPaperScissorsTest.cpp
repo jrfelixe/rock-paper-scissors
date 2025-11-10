@@ -21,6 +21,7 @@ namespace RockPaperScissorsTest
 		{
 			Assert::AreEqual(std::string("Player 2"), std::string(RockPaperScissors("rock", "paper")));
 			Assert::AreEqual(std::string("Player 2"), std::string(RockPaperScissors("scissors", "rock")));
+			Assert::AreEqual(std::string("Player 2"), std::string(RockPaperScissors("paper", "scissors")));
 		}
 	};
 }
