@@ -30,5 +30,10 @@ namespace RockPaperScissorsTest
 			Assert::AreEqual(std::string("Draw"), std::string(RockPaperScissors("paper", "paper")));
 			Assert::AreEqual(std::string("Draw"), std::string(RockPaperScissors("scissors", "scissors")));
 		}
+
+		TEST_METHOD(Invalid)
+		{
+			Assert::AreEqual(std::string("Invalid"), std::string(RockPaperScissors("Rock", "paper")));
+		}
 	};
 }
