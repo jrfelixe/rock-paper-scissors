@@ -11,7 +11,7 @@ const char* RockPaperScissors(const char* player1, const char* player2)
 	)
 		return "invalid";
 
-	// Determine who wins
+	// Check for Player 1 winning conditions
 	if (strcmp(player1, "rock") == 0 && strcmp(player2, "scissors") == 0)
 	{
 		return "Player 1";
@@ -24,10 +24,12 @@ const char* RockPaperScissors(const char* player1, const char* player2)
 	{
 		return "Player 1";
 	}
+	//Check for draw if both players choose the same move
 	else if (strcmp(player1, player2) == 0)
 	{
 		return "Draw";
 	}
+	//If none of the above if true, Player 2 wins
 	else
 	{
 		return "Player 2";
